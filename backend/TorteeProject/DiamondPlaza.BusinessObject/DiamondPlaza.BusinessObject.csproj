@@ -15,10 +15,4 @@
       <ProjectReference Include="..\DiamondPlaza.DAO\DiamondPlaza.DAO.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="ReponseModels\" />
-      <Folder Include="ReponseViewModels\" />
-      <Folder Include="RequestModels\" />
-    </ItemGroup>
-
 </Project>
