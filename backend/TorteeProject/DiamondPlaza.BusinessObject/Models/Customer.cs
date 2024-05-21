@@ -7,6 +7,9 @@ namespace DiamondPlaze.BusinessObject.Models
     {
         public Customer()
         {
+            // Initialize default values if necessary.
+            IsDelete = false;
+            CreateDate = DateTime.UtcNow;
         }
 
         [Key]
@@ -23,11 +26,13 @@ namespace DiamondPlaze.BusinessObject.Models
 
         public Guid? AccountId { get; set; }
 
-        [DataType(DataType.DateTime)]
-        public DateTime? CreateDate { get; set; }
+        public Guid TransactionId { get; set; }
 
-        [DataType(DataType.DateTime)]
-        public DateTime? UpdateDate { get; set; }
+        public int Point { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Status { get; set; }
 
         [StringLength(20, ErrorMessage = "Code cannot be longer than 20 characters")]
         public string Code { get; set; }
@@ -43,6 +48,14 @@ namespace DiamondPlaze.BusinessObject.Models
         [StringLength(20, ErrorMessage = "Phone number cannot be longer than 20 characters")]
         public string Phone { get; set; }
 
+        [DataType(DataType.DateTime)]
+        public DateTime? CreateDate { get; set; }
+
+        [DataType(DataType.DateTime)]
+        public DateTime? UpdateDate { get; set; }
+
+        // Navigation properties
         public virtual Account Account { get; set; }
+        public virtual Transaction Transaction { get; set; }
     }
 }

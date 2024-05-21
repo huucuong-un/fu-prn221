@@ -24,9 +24,6 @@ namespace DiamondPlaze.BusinessObject.Models
         [DataType(DataType.DateTime)]
         public DateTime? UpdateDate { get; set; }
 
-        [StringLength(20)]
-        public string Code { get; set; }
-
         public virtual ICollection<Account> Accounts { get; set; }
     }
 }

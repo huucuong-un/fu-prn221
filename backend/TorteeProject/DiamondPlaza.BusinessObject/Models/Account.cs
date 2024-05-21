@@ -9,7 +9,6 @@ namespace DiamondPlaze.BusinessObject.Models
         {
             // Initialize default values if necessary.
             IsDelete = false;
-            IsAssign = false;
             CreateDate = DateTime.UtcNow;
         }
 
@@ -37,10 +36,19 @@ namespace DiamondPlaze.BusinessObject.Models
         [StringLength(20)]
         public string Code { get; set; }
 
-        public bool? IsAssign { get; set; }
+        [Required]
+        [Range(0, double.MaxValue)]
+        public decimal Income { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Status { get; set; }
+
+        public Guid CounterId { get; set; }
 
         // Navigation properties
         public virtual Role Role { get; set; }
         public virtual Customer Customer { get; set; }
+        public virtual Counter Counter { get; set; }
     }
 }

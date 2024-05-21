@@ -1,4 +1,4 @@
-@DiamondPlaza.API_HostAddress = http://localhost:5111
+@DiamondPlaza.API_HostAddress = http://localhost:5097
 
 GET {{DiamondPlaza.API_HostAddress}}/weatherforecast/
 Accept: application/json

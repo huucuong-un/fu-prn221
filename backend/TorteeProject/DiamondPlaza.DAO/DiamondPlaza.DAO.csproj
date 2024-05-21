@@ -7,8 +7,4 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Tortee.BussinessObject\Tortee.BussinessObject.csproj" />
-    </ItemGroup>
-
 </Project>
