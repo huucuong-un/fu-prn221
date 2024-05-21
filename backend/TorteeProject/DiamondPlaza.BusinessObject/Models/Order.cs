@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DiamondPlaze.BusinessObject.Models
@@ -7,6 +8,7 @@ namespace DiamondPlaze.BusinessObject.Models
     {
         public Order()
         {
+            OrderItems = new HashSet<OrderItem>();
         }
         
         [Key]
@@ -29,7 +31,8 @@ namespace DiamondPlaze.BusinessObject.Models
         [Required]
         [StringLength(50)]
         public string Status { get; set; }
-
-      
+        
+        // Navigation property
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
     }
 }

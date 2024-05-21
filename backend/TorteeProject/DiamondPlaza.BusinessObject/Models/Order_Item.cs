@@ -33,6 +33,9 @@ namespace DiamondPlaze.BusinessObject.Models
         [StringLength(500)]
         public string Note { get; set; }
 
+        // Navigation property
+        public virtual Order Order { get; set; }
+
         public OrderItem()
         {
         }

@@ -8,6 +8,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="ReponseModels\" />
+      <Folder Include="ReponseViewModels\" />
+      <Folder Include="RequestModels\" />
+    </ItemGroup>
+
+    <ItemGroup>
       <ProjectReference Include="..\DiamondPlaza.DAO\DiamondPlaza.DAO.csproj" />
     </ItemGroup>
 

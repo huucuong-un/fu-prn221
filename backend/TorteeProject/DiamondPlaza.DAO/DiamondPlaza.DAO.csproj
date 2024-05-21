@@ -7,4 +7,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\DiamondPlaza.BusinessObject\DiamondPlaza.BusinessObject.csproj" />
+    </ItemGroup>
+
 </Project>

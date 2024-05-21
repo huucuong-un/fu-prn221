@@ -15,6 +15,9 @@ namespace DiamondPlaze.BusinessObject.Models
         [StringLength(50)]
         public string TransactionType { get; set; }
 
+        // Navigation property to Order
+        public virtual Order Order { get; set; }
+
         public Transaction()
         {
         }

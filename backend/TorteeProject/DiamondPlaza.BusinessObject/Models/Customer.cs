@@ -18,9 +18,14 @@ namespace DiamondPlaze.BusinessObject.Models
         [Required(ErrorMessage = "Name is required")]
         [StringLength(100, ErrorMessage = "Name cannot be longer than 100 characters")]
         public string Name { get; set; }
+        
 
         [StringLength(500, ErrorMessage = "Description cannot be longer than 500 characters")]
         public string Description { get; set; }
+        
+        [Required]
+        [Range(0, double.MaxValue)]
+        public decimal Income { get; set; }
 
         public bool IsDelete { get; set; }
 

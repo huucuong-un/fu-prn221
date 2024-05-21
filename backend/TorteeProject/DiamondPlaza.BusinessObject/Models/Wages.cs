@@ -19,6 +19,9 @@ namespace DiamondPlaze.BusinessObject.Models
         [StringLength(50)]
         public string Status { get; set; }
 
+        // Navigation property to ProductType
+        public virtual ProductType ProductType { get; set; }
+
         public Wages() { }
     }
 }

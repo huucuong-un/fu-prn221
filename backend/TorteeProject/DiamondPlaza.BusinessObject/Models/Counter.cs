@@ -21,6 +21,8 @@ public class Counter
     
     [Required]
     public string Status { get; set; }
+    
+    public virtual Account? Account { get; set; }
 
     
 }

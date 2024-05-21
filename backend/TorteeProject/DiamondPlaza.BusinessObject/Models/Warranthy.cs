@@ -26,6 +26,9 @@ namespace DiamondPlaze.BusinessObject.Models
         [StringLength(500)]
         public string Description { get; set; }
 
+        // Navigation property to OrderItem
+        public virtual OrderItem OrderItem { get; set; }
+
         public Warranty() { }
     }
 }
