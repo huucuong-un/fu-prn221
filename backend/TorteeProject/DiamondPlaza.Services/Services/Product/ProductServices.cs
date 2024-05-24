@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Product;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.Repository;
 
-public class ProductServices
+namespace DiamondPlaze.Service
 {
-    
+    public class ProductService : BaseService<Product>, IProductService
+    {
+        public ProductService(IProductRepository productRepository) : base(productRepository)
+        {
+        }
+    }
 }

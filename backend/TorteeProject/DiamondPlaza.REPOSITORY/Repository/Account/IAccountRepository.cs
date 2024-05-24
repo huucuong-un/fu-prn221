@@ -1,6 +1,8 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Account;
+﻿using DiamondPlaze.BusinessObject.Models;
 
-public interface IAccountRepository
+namespace DiamondPlaze.Repository
 {
-    
+    public interface IAccountRepository : IBaseRepository<Account>
+    {
+    }
 }

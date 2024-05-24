@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.DAO;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class Product_TypeDAO
+namespace DiamondPlaze.DataAccess
 {
-    
+    public class ProductTypeDAO : BaseDAO<ProductType>
+    {
+        public ProductTypeDAO(DiamondPlazeDbContext context) : base(context)
+        {
+        }
+    }
 }

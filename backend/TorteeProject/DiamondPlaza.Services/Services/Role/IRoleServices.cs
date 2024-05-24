@@ -1,6 +1,8 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Role;
+﻿using DiamondPlaze.BusinessObject.Models;
 
-public interface IRoleServices
+namespace DiamondPlaze.Service
 {
-    
+    public interface IRoleService : IBaseService<Role>
+    {
+    }
 }

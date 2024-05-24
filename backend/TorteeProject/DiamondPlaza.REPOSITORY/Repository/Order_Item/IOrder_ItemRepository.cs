@@ -1,6 +1,8 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Order_Item;
+﻿using DiamondPlaze.BusinessObject.Models;
 
-public interface IOrder_ItemRepository
+namespace DiamondPlaze.Repository
 {
-    
+    public interface IOrderItemRepository : IBaseRepository<OrderItem>
+    {
+    }
 }

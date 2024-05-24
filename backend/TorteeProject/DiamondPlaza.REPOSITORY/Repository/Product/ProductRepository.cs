@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Product;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class ProductRepository
+namespace DiamondPlaze.Repository
 {
-    
+    public class ProductRepository : BaseRepository<Product>, IProductRepository
+    {
+        public ProductRepository(ProductDAO productDao) : base(productDao)
+        {
+        }
+    }
 }

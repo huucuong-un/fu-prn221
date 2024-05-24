@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Account;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class AccountRepository
+namespace DiamondPlaze.Repository
 {
-    
+    public class AccountRepository : BaseRepository<Account>, IAccountRepository
+    {
+        public AccountRepository(AccountDAO accountDao) : base(accountDao)
+        {
+        }
+    }
 }

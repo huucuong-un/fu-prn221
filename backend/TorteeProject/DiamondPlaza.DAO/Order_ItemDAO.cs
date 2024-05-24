@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.DAO;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class Order_ItemDAO
+namespace DiamondPlaze.DataAccess
 {
-    
+    public class OrderItemDAO : BaseDAO<OrderItem>
+    {
+        public OrderItemDAO(DiamondPlazeDbContext context) : base(context)
+        {
+        }
+    }
 }

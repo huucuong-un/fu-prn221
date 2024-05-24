@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Order;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.Repository;
 
-public class OrderServices
+namespace DiamondPlaze.Service
 {
-    
+    public class OrderService : BaseService<Order>, IOrderService
+    {
+        public OrderService(IOrderRepository orderRepository) : base(orderRepository)
+        {
+        }
+    }
 }

@@ -1,6 +1,8 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Product_Material;
+﻿using DiamondPlaze.BusinessObject.Models;
 
-public interface IProductMaterialRepository
+namespace DiamondPlaze.Repository
 {
-    
+    public interface IProductMaterialRepository : IBaseRepository<ProductMaterial>
+    {
+    }
 }

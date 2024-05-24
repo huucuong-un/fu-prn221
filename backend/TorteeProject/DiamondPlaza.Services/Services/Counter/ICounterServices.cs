@@ -1,6 +1,8 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Counter;
+﻿using DiamondPlaze.BusinessObject.Models;
 
-public class ICounterServices
+namespace DiamondPlaze.Service
 {
-    
+    public interface ICounterService : IBaseService<Counter>
+    {
+    }
 }

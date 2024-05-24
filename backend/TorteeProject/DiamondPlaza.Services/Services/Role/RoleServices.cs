@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Role;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.Repository;
 
-public class RoleServices
+namespace DiamondPlaze.Service
 {
-    
+    public class RoleService : BaseService<Role>, IRoleService
+    {
+        public RoleService(IRoleRepository roleRepository) : base(roleRepository)
+        {
+        }
+    }
 }

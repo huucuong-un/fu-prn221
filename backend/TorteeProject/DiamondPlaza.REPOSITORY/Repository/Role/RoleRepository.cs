@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Role;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class RoleRepository
+namespace DiamondPlaze.Repository
 {
-    
+    public class RoleRepository : BaseRepository<Role>, IRoleRepository
+    {
+        public RoleRepository(RoleDAO roleDao) : base(roleDao)
+        {
+        }
+    }
 }

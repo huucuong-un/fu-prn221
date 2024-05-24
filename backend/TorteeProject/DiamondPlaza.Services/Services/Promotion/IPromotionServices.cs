@@ -1,6 +1,8 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Promotion;
+﻿using DiamondPlaze.BusinessObject.Models;
 
-public interface IPromotionServices
+namespace DiamondPlaze.Service
 {
-    
+    public interface IPromotionService : IBaseService<Promotion>
+    {
+    }
 }

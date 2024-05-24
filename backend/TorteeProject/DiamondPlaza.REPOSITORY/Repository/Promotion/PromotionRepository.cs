@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Promotion;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class PromotionRepository
+namespace DiamondPlaze.Repository
 {
-    
+    public class PromotionRepository : BaseRepository<Promotion>, IPromotionRepository
+    {
+        public PromotionRepository(PromotionDAO promotionDao) : base(promotionDao)
+        {
+        }
+    }
 }

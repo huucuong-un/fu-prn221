@@ -1,6 +1,8 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Transaction;
+﻿using DiamondPlaze.BusinessObject.Models;
 
-public interface ITransactionServices
+namespace DiamondPlaze.Service
 {
-    
+    public interface ITransactionService : IBaseService<Transaction>
+    {
+    }
 }

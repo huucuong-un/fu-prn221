@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.DAO;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class TransactionDAO_
+namespace DiamondPlaze.DataAccess
 {
-    
+    public class TransactionDAO : BaseDAO<Transaction>
+    {
+        public TransactionDAO(DiamondPlazeDbContext context) : base(context)
+        {
+        }
+    }
 }

@@ -1,7 +1,12 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Transaction;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class TransactionRepository
+namespace DiamondPlaze.Repository
 {
-    
-    
+    public class TransactionRepository : BaseRepository<Transaction>, ITransactionRepository
+    {
+        public TransactionRepository(TransactionDAO transactionDao) : base(transactionDao)
+        {
+        }
+    }
 }

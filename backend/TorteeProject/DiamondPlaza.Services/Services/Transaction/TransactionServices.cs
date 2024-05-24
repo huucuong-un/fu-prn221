@@ -1,7 +1,12 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Transaction;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.Repository;
 
-public class TransactionServices
+namespace DiamondPlaze.Service
 {
-    
-    
+    public class TransactionService : BaseService<Transaction>, ITransactionService
+    {
+        public TransactionService(ITransactionRepository transactionRepository) : base(transactionRepository)
+        {
+        }
+    }
 }

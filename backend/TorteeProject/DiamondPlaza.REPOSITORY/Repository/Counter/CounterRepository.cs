@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Counter;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class CounterRepository
+namespace DiamondPlaze.Repository
 {
-    
+    public class CounterRepository : BaseRepository<Counter>, ICounterRepository
+    {
+        public CounterRepository(CounterDAO counterDao) : base(counterDao)
+        {
+        }
+    }
 }

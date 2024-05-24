@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Order_Item;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class Order_ItemRepository
+namespace DiamondPlaze.Repository
 {
-    
+    public class OrderItemRepository : BaseRepository<OrderItem>, IOrderItemRepository
+    {
+        public OrderItemRepository(OrderItemDAO orderItemDao) : base(orderItemDao)
+        {
+        }
+    }
 }

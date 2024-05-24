@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.DAO;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class RoleDAO
+namespace DiamondPlaze.DataAccess
 {
-    
+    public class RoleDAO : BaseDAO<Role>
+    {
+        public RoleDAO(DiamondPlazeDbContext context) : base(context)
+        {
+        }
+    }
 }

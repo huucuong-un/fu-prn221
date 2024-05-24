@@ -1,6 +1,12 @@
-﻿namespace DiamondPlaza.DAO;
+﻿using DiamondPlaze.BusinessObject.Models;
+using DiamondPlaze.DataAccess;
 
-public class MaterialDAO
+namespace DiamondPlaze.DataAccess
 {
-    
+    public class MaterialDAO : BaseDAO<Material>
+    {
+        public MaterialDAO(DiamondPlazeDbContext context) : base(context)
+        {
+        }
+    }
 }

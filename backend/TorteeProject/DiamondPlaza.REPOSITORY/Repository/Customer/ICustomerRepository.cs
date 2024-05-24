@@ -1,6 +1,8 @@
-﻿namespace DiamondPlaza.REPOSITORY.Repository.Customer;
+﻿using DiamondPlaze.BusinessObject.Models;
 
-public class ICustomerRepository
+namespace DiamondPlaze.Repository
 {
-    
+    public interface ICustomerRepository : IBaseRepository<Customer>
+    {
+    }
 }
